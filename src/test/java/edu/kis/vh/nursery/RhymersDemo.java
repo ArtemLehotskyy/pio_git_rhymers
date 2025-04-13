@@ -11,6 +11,9 @@ import edu.kis.vh.nursery.factory.Rhymersfactory;
 
 class RhymersDemo {
 
+	/**
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		Rhymersfactory factory = new DefaultRhymersFactory();
 
@@ -18,6 +21,9 @@ class RhymersDemo {
 
 	}
 
+	/**
+	 * @param factory
+	 */
 	private static void testRhymers(Rhymersfactory factory) {
 		DefaultCountingOutRhymer[] rhymers = { factory.GetStandardRhymer(), factory.GetFalseRhymer(),
 				factory.GetFIFORhymer(), factory.GetHanoiRhymer() };
@@ -38,5 +44,4 @@ class RhymersDemo {
 
 		System.out.println("total rejected is " + ((HanoiRhymer) rhymers[3]).reportRejected());
 	}
-
 }
